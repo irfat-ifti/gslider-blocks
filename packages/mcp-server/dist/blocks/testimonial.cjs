@@ -5656,7 +5656,7 @@ var generateBaseSliderStyle = (attributes2) => {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: ${ratingStarGap.Desktop}px;
+            gap: ${ratingStarGap.Desktop ? `${ratingStarGap.Desktop}${ratingStarGapUnits.Desktop}` : "5px"};
         }
         .${blockId} .gslider-testimonial-rating-wrapper .gslider-testimonial-rating-icon svg {
             ${ratingStarSize.Desktop ? `width: ${ratingStarSize.Desktop}${ratingStarSizeUnits.Desktop};` : ""}
