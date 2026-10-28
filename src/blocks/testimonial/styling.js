@@ -1684,7 +1684,9 @@ const generateBaseSliderStyle = ( attributes ) => {
             justify-content: center;
             gap: ${
 				ratingStarGap.Desktop
-					? `${ ratingStarGap.Desktop }${ ratingStarGapUnits.Desktop }`
+					? `${ ratingStarGap.Desktop }${
+							ratingStarGapUnits?.Desktop || 'px'
+					  }`
 					: '5px'
 			};
         }
@@ -2797,7 +2799,9 @@ const generateBaseSliderStyle = ( attributes ) => {
             .${ blockId } .gslider-testimonial-rating-wrapper .gslider-testimonial-rating-inner .gslider-testimonial-rating-wrap {
                 gap: ${
 					ratingStarGap.Tablet
-						? `${ ratingStarGap.Tablet }${ ratingStarGapUnits.Tablet }`
+						? `${ ratingStarGap.Tablet }${
+								ratingStarGapUnits?.Tablet || 'px'
+						  }`
 						: '5px'
 				};
             }
@@ -3654,7 +3658,9 @@ const generateBaseSliderStyle = ( attributes ) => {
             .${ blockId } .gslider-testimonial-rating-wrapper .gslider-testimonial-rating-wrap {
                 gap: ${
 					ratingStarGap.Mobile
-						? `${ ratingStarGap.Mobile }${ ratingStarGapUnits.Mobile }`
+						? `${ ratingStarGap.Mobile }${
+								ratingStarGapUnits?.Mobile || 'px'
+						  }`
 						: '5px'
 				};
             }
